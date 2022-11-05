@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    display: flex; /* Flex container to display the child elements as flex with space between and wrap */
+    display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
     list-style: none;
@@ -28,7 +28,7 @@ header {
     background-color: rgba(255, 255, 255, 0.346);
     text-decoration: none;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     color: rgba(36, 4, 16, 0.431);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
 }
@@ -44,7 +44,7 @@ header {
 .btn {
     border-radius: 12px;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: purple;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
@@ -67,11 +67,11 @@ header {
 
 
 #gridContainer {
-   /* width:65%; /* Contain the grid to a maximum of 80% of the flex wrapper */
+   
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 2fr 1fr;  /* Create a 4X4 grid of same size*/
-    grid-template-rows: repeat(10, 1fr); /* 4 rows of equal size */
-    gap: 10px 10px; /* Gap on x and y grid */
+    grid-template-columns: repeat(2, 1fr) 2fr 1fr;  
+    grid-template-rows: repeat(10, 1fr); 
+    gap: 10px 10px; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
 }
 }
@@ -118,7 +118,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: aqua;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
@@ -130,7 +130,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: aqua;;
     place-self: center;
     color: white;
@@ -143,7 +143,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: aqua;;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
@@ -156,7 +156,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: aqua;
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
@@ -171,7 +171,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: aqua;
     color: white;
     font-family: 'Merienda';font-size: 15px;
@@ -184,7 +184,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /* Remove border around button */
+    outline: 0; 
     background-color: aqua;
     color: white;
     font-family: 'Merienda';font-size: 15px;
@@ -229,11 +229,11 @@ header {
 
 
 #answerCorrectWrongGrid {
-    /*width:65%; /* Contain the grid to a maximum of 80% of the flex wrapper */
+   
     display: grid;
-    grid-template-columns: 4fr;  /* Create a 4X4 grid of same size*/
-    grid-template-rows: repeat(2, 1fr); /* 4 rows of equal size */
-    gap: 10px 10px; /* Gap on x and y grid */
+    grid-template-columns: 4fr;  
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px 10px; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 20px;
 }
 
