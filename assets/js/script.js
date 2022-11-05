@@ -1,9 +1,9 @@
-// status of quiz. Quiz is not running = false , running = true
+// quiz status. Quiz not working = false , running = true
 var quizStatus = true; 
-// Track the question answered.
+// Tracks the question 
 var questionNumber = 0; 
-// Track next answers to show
-// Track next answers to show
+// next answers to show
+// next answers to show
 var answerNumber = 0; 
 // Max value by decreasing each wrong answer
 var score = 0; 
@@ -37,7 +37,7 @@ var button1234 = document.createElement("button");
 var timeLeft = 60; 
 
 
-// Do not display anything that is not ready to be displayed
+// Do not display anything that is not ready
 answer1BtnEl.style.display = 'none';
 answer2BtnEl.style.display = 'none';
 answer3BtnEl.style.display = 'none';
@@ -624,17 +624,3 @@ function lastQuestionWrong () {
     }
 
   }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
