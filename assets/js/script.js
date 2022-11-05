@@ -13,7 +13,7 @@ var finalAnswerCheck = 0
 var checkTimes = 1 
 // View High Scores Btn El
 var viewHighScoresBtnEl = document.getElementById('view-high-scores'); 
-var startQuizBtnEl = document.getElementById('start-quiz'); // Start Quiz button Btn El
+var startQuizBtnEl = document.getElementById('start-quiz'); 
 var answer1BtnEl = document.getElementById('answer1');  
 var answer2BtnEl = document.getElementById('answer2'); 
 var answer3BtnEl = document.getElementById('answer3'); 
@@ -55,8 +55,8 @@ var questionsObject = { // Object that holds correct answers.
         4 : "Strings must be enclosed with:"
     }
 };
-
-var answersObject = { // Object that holds correct answers.
+// Object that holds correct answers.
+var answersObject = { 
     answers: { 
         0 : {
             0: "Strings",
@@ -68,17 +68,17 @@ var answersObject = { // Object that holds correct answers.
             1: "Curly Brackets",
             2: "Quotes",
             3: "Square Brackets"},
-        2 : { // Button #3
+        2 : { 
             0: "Javascript",
             1: "Terminal/bash",
             2: "For loops", 
             3: "Console.log"},      
-        3 : { // Answer to question 5 --> Button #2
+        3 : { 
             0: "Commas",
             1: "Curly brackets",
             2: "Quotes", 
             3: "Parentheses"},      
-        4 : { // Button #4
+        4 : { 
             0: "Number of strings",
             1: "Other arrays",
             2: "Booleans",
@@ -110,7 +110,7 @@ viewHighScoresBtnEl.addEventListener("click", function() { // View high scores
 
 });
 
-submitScoreEl.addEventListener("click", function() { // Submit high scores
+submitScoreEl.addEventListener("click", function() { 
     
 
     var quizLocalStorage = "quiz";
@@ -141,12 +141,12 @@ submitScoreEl.addEventListener("click", function() { // Submit high scores
         checkUser = localStorage.getItem(quizUserDetails);
         // quizInitial + score will be checked against the input from the user to validate if exist already in local storage
    
-        if (checkUser == null) { // New user, no need to split
-            localStorage.setItem(quizUserDetails, value); // Value is equal to 
+        if (checkUser == null) { 
+            localStorage.setItem(quizUserDetails, value); 
             window.alert("Your score of " + highScore + " has been submitted!")
             break;
         } else if (checkUser != null){
-            checkUserValue = checkUser.split(","); // Split since the ojbect exist in local storage
+            checkUserValue = checkUser.split(","); 
            
         
         }  
@@ -159,7 +159,7 @@ submitScoreEl.addEventListener("click", function() { // Submit high scores
        
         // Only insert if the current highScore is higher, 
         // otherwise let the user know they had a higher score alreay
-        localStorage.setItem(quizUserDetails, value); // Value is equal to 
+        localStorage.setItem(quizUserDetails, value); 
         window.alert(highScore + " " + "is the latest entry for user initial " + enterInitialsTextArea.value + ". Entry will not be added.")
         break; 
         } else if (enterInitialsTextArea.value == "") {
@@ -167,17 +167,17 @@ submitScoreEl.addEventListener("click", function() { // Submit high scores
             break;
         } else if ( quizUserDetails == checkUserValue[0] && highScore > checkUserValue[1] ) { 
             // New high score submitted!
-            localStorage.setItem(quizUserDetails, value); // Value is equal to 
+            localStorage.setItem(quizUserDetails, value); 
             window.alert("New high score of " + highScore + " has been submitted!.\nYour previous score was " + checkUserValue[1])
             break; 
         } else if ( quizUserDetails == checkUserValue[0] && highScore < checkUserValue[1] ) { 
             // Your previous code was higher!
-            localStorage.setItem(quizUserDetails, value); // Value is equal to 
+            localStorage.setItem(quizUserDetails, value); 
             window.alert("Your previous code of " + checkUserValue[1] + " was higher. Entry will not be added.");
             break; 
 
         } else { // New entry all together
-            localStorage.setItem(quizUserDetails, value); // Value is equal to 
+            localStorage.setItem(quizUserDetails, value);
             window.alert("Your score of " + highScore + " has been submitted!")
             break;
         }
@@ -235,19 +235,20 @@ startQuizBtnEl.addEventListener("click", function() {
     
     var timeInterval = setInterval(function() {
 
-        if (score === 1){ // For any wrong answer, remove a point
+        // For any wrong answer, remove a point
+        if (score === 1){ t
             highScore -= 10;
         }
 
-        score = 0; // move the score back to 0 to check for another wrong answer.
+        score = 0; 
 
         
         if(timeLeft >= 1 && finalAnswerCheck !== 1) {
             //Assign text content to the question from our object
             questionDisplay.textContent = questionsObject.correct[questionNumber];
             
-            questionDisplay.style.display= ""; // Allow the questions to be displayed
-            answer1BtnEl.style.display = ""; // Allow our buttons to appear
+            questionDisplay.style.display= ""; 
+            answer1BtnEl.style.display = ""; 
             answer2BtnEl.style.display = "";
             answer3BtnEl.style.display = "";
             answer4BtnEl.style.display = "";
@@ -334,12 +335,13 @@ startQuizBtnEl.addEventListener("click", function() {
                             answerCorrectWrong.style.display='none'; 
                             startQuizBtnEl.style.display = 'none';
                             questionDisplay.textContent = "You have finished the quiz!";
-                            finalScoreDisplay.style.display = ""; // Allow display for final score
-                            enterInitials.style.display = ""; // Display Message Enter initials
-                            enterInitialsTextArea.style.display="";  // Capture user score once submitted is clicked.
-                            finalAnswerCheck = 1; // Final Wrong
+                            finalScoreDisplay.style.display = ""; 
+                            enterInitials.style.display = ""; 
+                            enterInitialsTextArea.style.display="";  
+                            finalAnswerCheck = 1; 
                             lastQuestionWrong();
-                            finalScoreDisplay.textContent = "Your final score is: " + highScore; // Assign the latest high score.
+                            // Assign the latest high score.
+                            finalScoreDisplay.textContent = "Your final score is: " + highScore; 
                             enterInitials.textContent = "Enter initials: "
                             submitScoreEl.style.display = "";
                             submitScoreEl.textContent = "Submit";                   
